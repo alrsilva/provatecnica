@@ -1,0 +1,44 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exec="http://www.telefonica.com.br/ExecutarAnaliseCredito/" xmlns:par="http://www.telefonica.com.br/ParametrosExecutarAnaliseCredito">
+   <soapenv:Header>
+      <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+         <wsse:UsernameToken wsu:Id="Id-0001427873415141-0000000076fdd541-1" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+            <wsse:Username>weblogic</wsse:Username>
+            <wsse:Password>welcome1</wsse:Password>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <exec:executarAnaliseCreditoRequest>
+         <par:cliente>
+            <par:documento>
+               <par:cpf>12312312312</par:cpf>
+            </par:documento>
+         </par:cliente>
+      </exec:executarAnaliseCreditoRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+
+<env:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+   <env:Header>
+      <wsa:MessageID>urn:68216ecc-f460-11e9-b5c4-56847afe9799</wsa:MessageID>
+      <wsa:ReplyTo>
+         <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+         <wsa:ReferenceParameters>
+            <instra:tracking.ecid xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">3c54df9f-3925-4a36-ada7-865559c7a39d-00000db0</instra:tracking.ecid>
+            <instra:tracking.FlowEventId xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">30215</instra:tracking.FlowEventId>
+            <instra:tracking.FlowId xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">30022</instra:tracking.FlowId>
+            <instra:tracking.CorrelationFlowId xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">0000MrknLBSFw000jzwkno1TfZTH00000O</instra:tracking.CorrelationFlowId>
+            <instra:tracking.quiescing.SCAEntityId xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">20016</instra:tracking.quiescing.SCAEntityId>
+         </wsa:ReferenceParameters>
+      </wsa:ReplyTo>
+      <wsa:FaultTo>
+         <wsa:Address>http://www.w3.org/2005/08/addressing/anonymous</wsa:Address>
+      </wsa:FaultTo>
+   </env:Header>
+   <env:Body>
+      <executarAnaliseCreditoResponse xmlns:ns2="http://www.telefonica.com.br/ResultadoExecutarAnaliseCredito" xmlns:ns1="http://www.telefonica.com.br/ParametrosExecutarAnaliseCredito" xmlns:pref1="http://www.telefonica.com.br/AnaliseCreditoResponse" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:pref="http://www.telefonica.com.br/AnaliseCreditoRequest" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.telefonica.com.br/ExecutarAnaliseCredito/" xmlns="http://www.telefonica.com.br/ExecutarAnaliseCredito/">
+         <ns2:PermiteHabilitacao>Error</ns2:PermiteHabilitacao>
+      </executarAnaliseCreditoResponse>
+   </env:Body>
+</env:Envelope>

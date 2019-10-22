@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAConfigPlan xmlns:jca="http://platform.integration.oracle/blocks/adapter/fw/metadata" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:orawsp="http://schemas.oracle.com/ws/2006/01/policy" xmlns:edl="http://schemas.oracle.com/events/edl" xmlns="http://schemas.oracle.com/soa/configplan">
+   <composite name="ExecutarAnalise">
+      <!--Add search and replace rules for the import section of a composite
+	Example:
+	<searchReplace>
+		<search>http://my-dev-server</search>
+		<replace>http://my-test-server</replace>
+	<searchReplace>
+	<searchReplace>
+		<search>8888</search>
+		<replace>8889</replace>
+	<searchReplace>-->
+      <import>
+         <searchReplace>
+            <search/>
+            <replace/>
+         </searchReplace>
+      </import>
+      <service name="executaranalisecredito_client_ep">
+         <binding type="ws">
+            <attribute name="port">
+               <replace>http://www.telefonica.com.br/ExecutarAnaliseCredito/#wsdl.endpoint(executaranalisecredito_client_ep/ExecutarAnaliseCredito_pt)</replace>
+            </attribute>
+         </binding>
+      </service>
+      <property name="productVersion">
+         <replace>12.2.1.1.0.160608</replace>
+      </property>
+      <property name="compositeID">
+         <replace>8ae66a9b-5f83-41c1-9052-c3de50650c17</replace>
+      </property>
+      <!--Add search and replace rules for the component properties
+	For components and service/reference bindings, you can add policy references.
+	Example:
+	<component name="*">
+		<wsp:PolicyReference orawsp:category="management" orawsp:status="enabled" URI="oracle/log_policy"/>
+	</component>-->
+      <reference name="BuscarDadosCliente">
+         <!--Add search and replace rules for the binding properties-->
+         <binding type="ws">
+            <attribute name="port">
+               <replace>http://www.telefonica.com.br/BuscarDadosCliente/#wsdl.endpoint(BuscarDadosClienteSOAPQSService/BuscarDadosClienteSOAPQSPort)</replace>
+            </attribute>
+            <attribute name="location">
+               <replace>WSDLs/BuscarDadosCliente.wsdl</replace>
+            </attribute>
+            <property name="weblogic.wsee.wsat.transaction.flowOption">
+               <replace>WSDLDriven</replace>
+            </property>
+            <property name="oracle.webservices.auth.username">
+               <replace>weblogic</replace>
+            </property>
+            <property name="oracle.webservices.auth.password">
+               <replace>welcome1</replace>
+            </property>
+         </binding>
+      </reference>
+      <reference name="RealizarAnaliseCredito">
+         <!--Add search and replace rules for the binding properties-->
+         <binding type="ws">
+            <attribute name="port">
+               <replace>http://www.telefonica.com.br/RealizarAnaliseCredito/#wsdl.endpoint(RealizarAnaliseCredito/RealizarAnaliseCreditoSOAP)</replace>
+            </attribute>
+            <attribute name="location">
+               <replace>WSDLs/RealizarAnaliseCredito.wsdl</replace>
+            </attribute>
+            <property name="weblogic.wsee.wsat.transaction.flowOption">
+               <replace>WSDLDriven</replace>
+            </property>
+            <property name="oracle.webservices.auth.username">
+               <replace>weblogic</replace>
+            </property>
+            <property name="oracle.webservices.auth.password">
+               <replace>welcome1</replace>
+            </property>
+         </binding>
+      </reference>
+   </composite>
+   <!--To configure monitor.config: 
+	<property name="enabled"><replace>true</replace></property>
+	<property name="dataObjectsFolder"><searchReplace><search>mydev</search><replace>myproduction</replace></searchReplace></property>
+	
+	sample properties to configure for adapter: 
+	<jca:property name="QueueName"><replace>medmq1</replace></jca:property>
+	
+	To add search and replace rules for wsdls, xsd and jca files
+	Example:
+	<searchReplace>
+		<search>http://my-dev-server</search>
+		<replace>http://my-test-server</replace>
+	<searchReplace>
+	<searchReplace>
+		<search>8888</search>
+		<replace>8889</replace>
+	<searchReplace>
+	-->
+   <wsdlAndSchema name="WSDLs/BuscarDadosCliente.wsdl|WSDLs/BuscarDadosClienteWrapper.wsdl|WSDLs/RealizarAnaliseCreditoWrapper.wsdl|WSDLs/RealizarAnaliseCredito.wsdl|WSDLs/ExecutarAnaliseCreditoWrapper.wsdl|WSDLs/ExecutarAnaliseCredito.wsdl|Schemas/ParametrosExecutarAnaliseCredito.xsd|Schemas/AnaliseCreditoResponse.xsd|Schemas/BuscarDadosClienteRequest.xsd|Schemas/ResultadoExecutarAnaliseCredito.xsd|Schemas/AnaliseCreditoRequest.xsd|Schemas/ResultadoBuscarDadosCliente.xsd|wsm-assembly.xml">
+      <searchReplace>
+         <search>http://localhost:8001</search>
+         <replace>http://servidor:porta</replace>
+      </searchReplace>
+   </wsdlAndSchema>
+</SOAConfigPlan>

@@ -1,0 +1,55 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bus="http://www.telefonica.com.br/BuscarDadosCliente/" xmlns:bus1="http://www.telefonica.com.br/BuscarDadosCliente">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <bus:request>
+         <bus1:cliente>
+            <bus1:documento>
+               <bus1:cpf>32132132132</bus1:cpf>
+            </bus1:documento>
+         </bus1:cliente>
+      </bus:request>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<soapenv:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <env:Header/>
+   <soapenv:Body xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ns2:ResultadoBuscarDadosCliente xmlns:ns2="http://www.telefonica.com.br/ResultadoBuscarDadosCliente">
+         <ns2:cliente>
+            <ns2:nome>Jose Alberto</ns2:nome>
+            <ns2:endereco>
+               <ns2:logradouro>Rua dos abacateiros</ns2:logradouro>
+               <ns2:numero>29</ns2:numero>
+            </ns2:endereco>
+         </ns2:cliente>
+      </ns2:ResultadoBuscarDadosCliente>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bus="http://www.telefonica.com.br/BuscarDadosCliente/" xmlns:bus1="http://www.telefonica.com.br/BuscarDadosCliente">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <bus:request>
+         <bus1:cliente>
+            <bus1:documento>
+               <bus1:cpf>12312312312</bus1:cpf>
+            </bus1:documento>
+         </bus1:cliente>
+      </bus:request>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<soapenv:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <env:Header/>
+   <soapenv:Body xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ns2:ResultadoBuscarDadosCliente xmlns:ns2="http://www.telefonica.com.br/ResultadoBuscarDadosCliente">
+         <ns2:cliente>
+            <ns2:nome>Joelmo dos Santos</ns2:nome>
+            <ns2:endereco>
+               <ns2:logradouro>Avenida Paulista</ns2:logradouro>
+               <ns2:numero>332</ns2:numero>
+            </ns2:endereco>
+         </ns2:cliente>
+      </ns2:ResultadoBuscarDadosCliente>
+   </soapenv:Body>
+</soapenv:Envelope>

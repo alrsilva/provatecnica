@@ -1,0 +1,13 @@
+Com essa Entrega estão em anexo dois arquivos
+1) ExecutarAnalise_cfgplan.xml - Arquivo para fazer o deploy do pacote Bpel.
+No final do arquivo se encontram informações de servidor e porta. No search é o que está configurado no BPEL, o http://servidor:porta é para ser adicionado com a url no caso de haver Apache e a porta.
+<search>http://localhost:8001</search>
+<replace>http://servidor:porta</replace>
+
+2)OSBCustomizationFile.xml - Arquivo para ser adicionado após o deploy do pacote OSB, para torcar os apontamentos para os servidores corretos.
+
+Endereço http://localhost:8001 deve ser trocado para o endereço onde se encontra o servidor BPEL
+
+Endereço http://127.0.0.1:7001 deve ser trocado para onde se encontra o deploy da aplicação ProvaDevServices.war
+
+A ordem de deploy é primeiro o artefato ProvaDevServicos.jar no servidor OSB e depois o artefato sca_ExecutarAnalise_rev1.0.jar no servidor do BPEL, com seus devidos arquivos de configurações.

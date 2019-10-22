@@ -1,0 +1,69 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:real="http://www.telefonica.com.br/RealizarAnaliseCredito/" xmlns:anal="http://www.telefonica.com.br/AnaliseCreditoRequest">
+   <soapenv:Header>
+   <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+         <wsse:UsernameToken wsu:Id="Id-0001427873415141-0000000076fdd541-1" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+            <wsse:Username>weblogic</wsse:Username>
+            <wsse:Password>welcome1</wsse:Password>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <real:realizarAnaliseCredito>
+       <anal:cliente xmlns:anal="http://www.telefonica.com.br/AnaliseCreditoRequest">
+        <anal:documento>
+            <anal:cpf>12312312312</anal:cpf>
+        </anal:documento>
+        <anal:nome>Joelmo dos Santos</anal:nome>
+        <anal:endereco>
+            <anal:logradouro>Avenida Paulista</anal:logradouro>
+            <anal:numero>332</anal:numero>
+        </anal:endereco>
+    </anal:cliente>
+      </real:realizarAnaliseCredito>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+
+<soapenv:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <env:Header/>
+   <soapenv:Body xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ns2:ResultadoAnaliseCredito xmlns:ns2="http://www.telefonica.com.br/AnaliseCreditoResponse">
+         <ns2:Score>500</ns2:Score>
+      </ns2:ResultadoAnaliseCredito>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:real="http://www.telefonica.com.br/RealizarAnaliseCredito/" xmlns:anal="http://www.telefonica.com.br/AnaliseCreditoRequest">
+   <soapenv:Header>
+   <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+         <wsse:UsernameToken wsu:Id="Id-0001427873415141-0000000076fdd541-1" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+            <wsse:Username>weblogic</wsse:Username>
+            <wsse:Password>welcome1</wsse:Password>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <real:realizarAnaliseCredito>
+       <anal:cliente xmlns:anal="http://www.telefonica.com.br/AnaliseCreditoRequest">
+        <anal:documento>
+            <anal:cpf>32132132132</anal:cpf>
+        </anal:documento>
+        <anal:nome>Jose Alberto</anal:nome>
+        <anal:endereco>
+            <anal:logradouro>Rua dos abacateiros</anal:logradouro>
+            <anal:numero>29</anal:numero>
+        </anal:endereco>
+    </anal:cliente>
+      </real:realizarAnaliseCredito>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<soapenv:Envelope xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <env:Header/>
+   <soapenv:Body xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ns2:ResultadoAnaliseCredito xmlns:ns2="http://www.telefonica.com.br/AnaliseCreditoResponse">
+         <ns2:Score>950</ns2:Score>
+      </ns2:ResultadoAnaliseCredito>
+   </soapenv:Body>
+</soapenv:Envelope>

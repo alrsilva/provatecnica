@@ -1,0 +1,46 @@
+
+<soapenv:Envelope 	xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+	<soap:Header 	xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	</soap:Header>
+	<soapenv:Body>
+		<proc:executarProcessoAnaliseCreditoRequest 	xmlns:proc="http://www.telefonica.com.br/ProcessoAnaliseCredito/">
+			<par:cliente 	xmlns:par="http://www.telefonica.com.br/ParametrosProcessoAnaliseCredito">
+				<par:documento>
+					<par:cpf>32132132132</par:cpf>
+				</par:documento>
+			</par:cliente>
+		</proc:executarProcessoAnaliseCreditoRequest>
+	</soapenv:Body>
+</soapenv:Envelope>
+
+
+
+<soapenv:Envelope 	xmlns:env="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+	<soapenv:Header 	xmlns:wsa="http://www.w3.org/2005/08/addressing">
+		<wsa:MessageID>urn:e826a284-f45e-11e9-b5c4-56847afe9799</wsa:MessageID>
+		<wsa:ReplyTo>
+			<wsa:Address>
+http://www.w3.org/2005/08/addressing/anonymous
+			</wsa:Address>
+			<wsa:ReferenceParameters>
+				<instra:tracking.ecid 	xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">
+d660b50d-3791-4eec-8ec8-b5ced33e7c4b-0000030e
+				</instra:tracking.ecid>
+				<instra:tracking.FlowEventId 	xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">30126</instra:tracking.FlowEventId>
+				<instra:tracking.FlowId 	xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">30014</instra:tracking.FlowId>
+				<instra:tracking.CorrelationFlowId 	xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">0000MrkkrrhFw000jzwkno1TfZTH00000G</instra:tracking.CorrelationFlowId>
+				<instra:tracking.quiescing.SCAEntityId 	xmlns:instra="http://xmlns.oracle.com/sca/tracking/1.0">20016</instra:tracking.quiescing.SCAEntityId>
+			</wsa:ReferenceParameters>
+		</wsa:ReplyTo>
+		<wsa:FaultTo>
+			<wsa:Address>
+http://www.w3.org/2005/08/addressing/anonymous
+			</wsa:Address>
+		</wsa:FaultTo>
+	</soapenv:Header>
+	<soapenv:Body 	xmlns:wsa="http://www.w3.org/2005/08/addressing">
+		<ns2:executarProcessoAnaliseCreditoResponse 	xmlns:ns2="http://www.telefonica.com.br/ProcessoAnaliseCredito/">
+			<res1:PermiteHabilitacao 	xmlns:res1="http://www.telefonica.com.br/ResultadoProcessoAnaliseCredito">True</res1:PermiteHabilitacao>
+		</ns2:executarProcessoAnaliseCreditoResponse>
+	</soapenv:Body>
+</soapenv:Envelope>
